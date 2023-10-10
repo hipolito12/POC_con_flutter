@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_poc/pages/top_bar.dart';
 import 'package:flutter_poc/models/pokemons.dart';
-import 'package:flutter_poc/pages/add_Pokemon.dart';
 
 class Principal extends StatefulWidget {
   const Principal({super.key});
