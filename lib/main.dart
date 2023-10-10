@@ -41,7 +41,7 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
     'Dragon': const Color(0xFF7B68EE),
     'Electric': const Color(0xFFFFFF00),
     'Ghost': const Color(0xFF8A2BE2),
-    'Fire': const Color(0xFFDC143C),
+    'Fire': Color.fromARGB(255, 251, 33, 77),
     'Fairy': const Color(0xFFFF88EE),
     'Ice': const Color(0xFF00FFFF),
     'Fighting': const Color(0xFF8B0000),
