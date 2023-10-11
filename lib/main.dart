@@ -33,7 +33,7 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
   final List<dynamic> _pokemonList = [];
   int _offset = 0;
   final int _limit = 20;
-  // Estilos generados por IA
+  // Estilos para las Cards
   Map<String, Color> typeColors = {
     'Steel': const Color(0xFFD3D3D3),
     'Water': const Color(0xFF4169E1),
@@ -41,7 +41,7 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
     'Dragon': const Color(0xFF7B68EE),
     'Electric': const Color(0xFFFFFF00),
     'Ghost': const Color(0xFF8A2BE2),
-    'Fire': Color.fromARGB(255, 251, 33, 77),
+    'Fire': const Color.fromARGB(255, 251, 33, 77),
     'Fairy': const Color(0xFFFF88EE),
     'Ice': const Color(0xFF00FFFF),
     'Fighting': const Color(0xFF8B0000),
@@ -52,7 +52,6 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
     'Dark': const Color(0xFF2F4F4F),
     'Ground': const Color(0xFFDEB887),
     'Poison': const Color(0xFF9370DB),
-    // Add more types and colors as needed
   };
 
   @override
@@ -61,6 +60,7 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
     fetchPokemonList();
   }
 
+//fetch a la pokeAPI
   Future<void> fetchPokemonList() async {
     try {
       final response = await _dio.get(
@@ -87,10 +87,12 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
     return typeColors[type]?.withOpacity(0.8) ?? Colors.grey.withOpacity(0.8);
   }
 
+//funcion para cargar mas pokemons al tocar le boton
   void _loadMorePokemons() {
     fetchPokemonList();
   }
 
+  //funcion que te lleva a otro widget donde se muestran los detaller ,se pasa como parametro el nombre del pokemon
   void _showPokemonDetails(String pokemonName) {
     Navigator.push(
       context,
@@ -149,7 +151,7 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
                                                                           0
                                                                       ? 'Bug'
                                                                       : 'Water';
-
+//detecto  el toque en la card y llamo a la funcion que me lleva a los detalles
           return GestureDetector(
             onTap: () => _showPokemonDetails(pokemon['name']),
             child: Container(
@@ -184,6 +186,7 @@ class _PokemonListScreenState extends State<PokemonListScreen> {
   }
 }
 
+// Este es el widget que muestra los detalles del pokemon
 class PokemonDetailScreen extends StatelessWidget {
   final String pokemonName;
 
@@ -199,6 +202,8 @@ class PokemonDetailScreen extends StatelessWidget {
         future: fetchPokemonDetails(pokemonName),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
+            /* Verifico el estado de la llamada a la API y si es "waiting" muestro un 
+                                                                     circulo de carga */
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
@@ -207,6 +212,7 @@ class PokemonDetailScreen extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
+                //se muestra los datos del pokemon cn el nombre pasado por parametro
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -244,6 +250,7 @@ class PokemonDetailScreen extends StatelessWidget {
     );
   }
 
+//Otra funcion que me trae los detalles del pokemon usando el nombre del pokemon
   Future<Map<String, dynamic>> fetchPokemonDetails(String name) async {
     try {
       final Dio dio = Dio();
