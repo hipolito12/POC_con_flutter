@@ -18,7 +18,9 @@ https://pokeapi.co/api/v2/pokemon
 - Santiago spini
 
 #Interfaz en celular (Android)
-![image](https://github.com/hipolito12/POC_con_flutter/assets/84524423/5360c260-5c36-4101-b81e-13c350057075)
 
-![image](https://github.com/hipolito12/POC_con_flutter/assets/84524423/593ed0ff-365c-4372-a225-b5a3503a9db6)
+
+- ![image](https://github.com/hipolito12/POC_con_flutter/assets/84524423/5360c260-5c36-4101-b81e-13c350057075)
+
+- ![image](https://github.com/hipolito12/POC_con_flutter/assets/84524423/593ed0ff-365c-4372-a225-b5a3503a9db6)
 
