@@ -17,7 +17,7 @@ https://pokeapi.co/api/v2/pokemon
 - Sofia Belen eguiazu robman
 - Santiago spini
 
-#Interfaz en celular (Android)
+# Interfaz en celular (Android)
 
 
 - ![image](https://github.com/hipolito12/POC_con_flutter/assets/84524423/5360c260-5c36-4101-b81e-13c350057075)
