@@ -4,18 +4,18 @@ Prueba de concepto usando Flutter, el proyecto consta de una lista de pokemones 
 ## Presentacion
  https://view.genial.ly/65296beb235f5f00100a6549/presentation-flutter-poc
 
-# Data Source 
+## Data Source 
 https://pokeapi.co/api/v2/pokemon
 
-# Entorno
+## Entorno
 - Android Studio
 - Flutter
   
 
-# Dependencias
+## Dependencias
 - Dio
 
-# Integrantes
+## Integrantes
 - Hipolito La Barba
 - Sofia Belen eguiazu robman
 - Santiago spini
