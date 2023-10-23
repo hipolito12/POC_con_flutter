@@ -1,8 +1,9 @@
 # POC_con_flutter
 Prueba de concepto usando Flutter, el proyecto consta de una lista de pokemones donde dependiendo del tipo de pokemon se va a mostrar con un color caracteristico , donde al tocarlo te muestre una descripción . Se utilizara la PokeAPI
 
-## Presentacion
- https://view.genial.ly/65296beb235f5f00100a6549/presentation-flutter-poc
+## Presentaciones
+ - Power Point:https://view.genial.ly/65296beb235f5f00100a6549/presentation-flutter-poc
+ - Informe: https://docs.google.com/document/d/1bhyvkDgG77h-VGfkYuPMVNlRof2CLpxcATq33fwIRXo/edit
 
 ## Data Source 
 https://pokeapi.co/api/v2/pokemon
